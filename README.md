@@ -1,16 +1,15 @@
-
-# jQuery SPBITEC Recently viewed 1.0 
+/*######## jQuery SPBITEC Recently viewed  ###################################################
 	
-	
-	Version: 		1.0.4
+	Version: 		1.0.5
 	Url: 			http://spbitec.ru/
+	Repository:  
 	Description: 	Recently viewed items.
 	Support types:
-					вЂ” http://schema.org/Product					
+					— http://schema.org/Product					
 						- image
 						- name
 						- offers
-						вЂ” http://schema.org/Offer
+						— http://schema.org/Offer
 							- url
 							- sku
 							- serialNumber
@@ -81,5 +80,3 @@
 	Events
 	
 	window.on('it_recently_created',function(){});	 //when structure created
-	
- 
