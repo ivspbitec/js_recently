@@ -1,6 +1,6 @@
 /*######## jQuery SPBITEC Recently viewed  ###################################################
 	
-	Version: 		1.0.5
+	Version: 		1.0.6
 	Url: 			http://spbitec.ru/
 	Repository:  
 	Description: 	Recently viewed items.
@@ -276,6 +276,15 @@
 				this.data.items = new_items;
 				this.save();
 			}
+			/** Get item by num */
+			this.get = function (num){	
+				if (Number.isInteger(num)){
+					return this.data.items[num];
+				}else{
+					console.error('it_recent.scope.get(numm) - Num is not integer');
+					return false;
+				}
+			}
 
 			this.remove = function (item) { //1.2 Remove item  
 				this.parent._debug('remove()');
@@ -379,6 +388,7 @@
 					$item = $(this._item_template_parse(is[n], this.options.item_template));
 					$item.data('it_recently', this);
 					$item.data('it_recently_item', is[n]);
+					//$item.attr('it-recently-item-num', n);
 					this.$o.append($item);
 				}
 
